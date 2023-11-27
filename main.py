@@ -57,31 +57,24 @@ class MyWindow(QMainWindow):
     def drawing(self, qp):
         if self.x > -1 and self.y > -1 and self.GOG == 1:
             qp.setBrush(QColor(choice(self.colors)))
-
             leigt = randint(50, 200)
-
             qp.drawRect(self.x - leigt // 2, self.y - leigt // 2, leigt, leigt)
             ex.show()
 
         elif self.x > -1 and self.y > -1 and self.GOG == -1:
             qp.setBrush(QColor(choice(self.colors)))
-
             leigt = randint(50, 200)
-
             qp.drawEllipse(self.x - leigt // 2, self.y - leigt // 2, leigt,
                            leigt)
 
         elif self.D_x > -1 and self.D_y > -1 and self.GOG == 2:
             qp.setBrush(QColor(choice(self.colors)))
-
             leigt = randint(50, 200)
-
             points = QPolygon(
                 [QPoint((self.D_x + leigt // 2), (self.D_y + leigt // 2)),
-                 # Правая
-                 QPoint(self.D_x, self.D_y - leigt // 2),  # Верхушка
+                 QPoint(self.D_x, self.D_y - leigt // 2),
                  QPoint(self.D_x - leigt // 2,
-                        self.D_y + leigt // 2)])  # Левая
+                        self.D_y + leigt // 2)])
             qp.drawPolygon(points)
 
 
