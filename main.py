@@ -27,7 +27,7 @@ class MyWindow(QMainWindow):
         self.D_x, self.D_y = -1, -1
         self.x, self.y = -1, -1
         self.GOG = None
-        self.colors = ['Yellow', "Green", "Black"]
+        self.colors = ['Yellow', "Green", "Black", "Purple"]
 
     def mousePressEvent(self, event):
         self.x = event.x()
