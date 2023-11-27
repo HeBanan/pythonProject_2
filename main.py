@@ -27,21 +27,20 @@ class MyWindow(QMainWindow):
         self.D_x, self.D_y = -1, -1
         self.x, self.y = -1, -1
         self.GOG = None
-        self.colors = ['Red', 'Orange', 'Yellow', 'Green', 'Cyan',
-                       'Blue', 'Magenta', 'Purple', 'Brown', 'Black', 'Pink']
+        self.colors = ['Yellow']
 
     def mousePressEvent(self, event):
         self.x = event.x()
         self.y = event.y()
         if event.button() == Qt.LeftButton:
-            self.GOG = 1
+            self.GOG = -1
         elif event.button() == Qt.RightButton:
             self.GOG = -1
         self.update()
 
     def keyPressEvent(self, event):
         if event.key() == Qt.Key_Space:
-            self.GOG = 2
+            self.GOG = -1
         self.update()
 
     def mouseMoveEvent(self, event):
